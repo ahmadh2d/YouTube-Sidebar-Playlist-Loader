@@ -1,0 +1,39 @@
+<h2>Additional Info</h2>
+
+<h3>Description:</h3>
+<p>The <strong>YouTube Sidebar Playlists Loader</strong> script adds a custom "My Playlists" link to the YouTube sidebar. When hovered over, a submenu is displayed, showing all playlists from the user's account. The playlists are fetched automatically upon page load, and users can navigate directly to any playlist by clicking on its name.</p>
+
+<h3>How It Works:</h3>
+<ul>
+    <li><strong>Playlist Link Creation:</strong> The script waits for the YouTube page to load, then inserts a new "My Playlists" link into the sidebar. This link acts as a trigger to show a submenu with all the playlists.</li>
+    <li><strong>Playlist Fetching:</strong> The script makes an HTTP request to YouTube's internal API to retrieve the list of playlists associated with the user. It then parses the response, extracts the playlist titles and URLs, and dynamically creates menu items.</li>
+    <li><strong>Submenu Behavior:</strong> When users hover over the "My Playlists" link, the submenu is displayed. The submenu is positioned to the right of the link and remains visible while the mouse hovers over it. The submenu hides once the user moves the mouse away.</li>
+</ul>
+
+<h3>Features:</h3>
+<ul>
+    <li><strong>Hover Effects:</strong> Both the playlist link and the individual playlist items have hover effects. The playlist link changes its background color and adds rounded corners when hovered. Playlist items change color to yellow when hovered over.</li>
+    <li><strong>Customizable Styles:</strong> The script includes basic styles for the link and submenu, such as font size, color, and padding, which can be easily modified to suit user preferences. Currently, dark mode styles only.</li>
+    <li><strong>Cross-Domain Requests:</strong> The script utilizes the <code>GM_xmlhttpRequest</code> API to make cross-domain requests, allowing it to fetch playlist data directly from YouTube's feed.</li>
+</ul>
+
+<h3>Usage:</h3>
+<ol>
+    <li>Install this userscript using Tampermonkey or any other compatible userscript manager.</li>
+    <li>Navigate to YouTube. Once the page fully loads, you will see a new "My Playlists" item in the sidebar.</li>
+    <li>Hover over the "My Playlists" link to display the submenu with your playlists.</li>
+    <li>Click any playlist in the submenu to open it in a new tab.</li>
+</ol>
+
+<h3>Notes:</h3>
+<ul>
+    <li>The script is compatible with <strong>ECMAScript 2020+ (ES11+)</strong> and uses modern JavaScript features like <code>const</code>, <code>let</code>, arrow functions, optional chaining, and template literals.</li>
+    <li>It may require adjustments for use on non-English YouTube pages or if YouTube significantly changes its page structure.</li>
+</ul>
+
+<h3>Potential Issues:</h3>
+<ul>
+    <li>If the "My Playlists" link doesn't appear, ensure that your YouTube sidebar is visible and accessible by the script.</li>
+    <li>The script may not work on YouTube pages that hidden or collapsed sidebar.</li>
+    <li>Styles works only for YouTube in dark mode.</li>
+</ul>
